@@ -9,9 +9,8 @@ import launch
 
 def install_lama_cleaner():
     try:
-        if not launch.is_installed("lama-cleaner"):
-            launch.run_pip("install lama-cleaner", desc='lama-cleaner')
-            return ['Installed.']
+        launch.run_pip("install -U lama-cleaner", desc='lama-cleaner')
+        return ['Installed.']
     except:
         print("Install failed.")
 
@@ -28,7 +27,7 @@ def start_lama_cleaner(command):
 def on_ui_tabs():
     with gr.Blocks() as lama_cleaner_tab:
         status = gr.HTML()
-        install = gr.Button("Install")
+        install = gr.Button("Install / Update")
         start = gr.Button("Start")
         start_command = gr.Textbox('start venv/bin/lama-cleaner --model=lama --device=cpu --port=7870', label="Start Command")
         iframe_height = gr.Textbox(800, label="iframe Height")
