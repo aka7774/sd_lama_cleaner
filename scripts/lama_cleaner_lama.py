@@ -24,6 +24,9 @@ class FakeArgs(BaseModel):
     enable_xformers: bool = False
     model_dir: str = None
     output_dir: str = None
+    enable_interactive_seg: bool = True
+    enable_remove_bg: bool = True
+    enable_realesrgan: bool = True
 
 if __name__ == "__main__":
     main(FakeArgs())
