@@ -29,7 +29,7 @@ def on_ui_tabs():
         status = gr.HTML()
         install = gr.Button("Install / Update")
         start = gr.Button("Start")
-        start_command = gr.Textbox('start venv/bin/lama-cleaner --model=lama --device=cpu --port=7870', label="Start Command")
+        start_command = gr.Textbox('start venv/Scripts/lama-cleaner --model=lama --device=cpu --port=7870', label="Start Command")
         iframe_height = gr.Textbox(800, label="iframe Height")
         open_iframe = gr.Button("Open")
         open_newtab = gr.Button("Open New Window")
